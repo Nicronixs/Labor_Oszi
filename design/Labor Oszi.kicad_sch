@@ -6,7 +6,7 @@
 	(paper "A4")
 	(title_block
 		(title "Oszilloskop")
-		(rev "Version 1.0")
+		(rev "Version 1.1")
 	)
 	(lib_symbols
 		(symbol "Connector:Conn_Coaxial"
@@ -4905,7 +4905,7 @@
 				(hide yes)
 			)
 		)
-		(property "LCSC Part #" "C7377"
+		(property "LCSC Part #" "C185041"
 			(at 234.95 33.02 0)
 			(effects
 				(font
@@ -5009,7 +5009,7 @@
 				(hide yes)
 			)
 		)
-		(property "LCSC Part #" "C7377"
+		(property "LCSC Part #" "C185041"
 			(at 236.22 67.31 0)
 			(effects
 				(font
@@ -5566,7 +5566,7 @@
 				(hide yes)
 			)
 		)
-		(property "LCSC Part #" "C7377"
+		(property "LCSC Part #" "C185041"
 			(at 234.95 95.25 0)
 			(effects
 				(font
@@ -5905,7 +5905,7 @@
 				(hide yes)
 			)
 		)
-		(property "LCSC Part #" "C7377"
+		(property "LCSC Part #" "C185041"
 			(at 236.22 127 0)
 			(effects
 				(font
