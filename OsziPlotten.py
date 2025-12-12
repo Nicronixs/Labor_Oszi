@@ -1,34 +1,35 @@
 import serial
 import pyqtgraph as pg
-from pyqtgraph.Qt import QtGui, QtCore
+from pyqtgraph.Qt import QtCore, QtWidgets  # QtWidgets statt QtGui
 
-PORT = "COM3"
+PORT = "COM7"      # anpassen
 BAUD = 115200
 
 ser = serial.Serial(PORT, BAUD)
 
-app = QtGui.QApplication([])
-win = pg.GraphicsLayoutWidget(show=True, title="STM32 Live Plot")
-plot = win.addPlot(title="Signal")
-curve = plot.plot()
+# QApplication verwenden
+app = QtWidgets.QApplication([])
+
+win = pg.GraphicsLayoutWidget(show=True, title="STM32 Live uint8_t Plot")
+plot = win.addPlot(title="Kanal 1")
+curve = plot.plot(pen='y')  # gelbe Linie
+plot.setYRange(0, 255)
 
 data = []
 
 def update():
     global data
-    if ser.in_waiting:
-        line = ser.readline().decode().strip()
-        try:
-            value = float(line)
-            data.append(value)
-            if len(data) > 2000:
-                data = data[-2000:]   # nur letztes Fenster anzeigen
-            curve.setData(data)
-        except:
-            pass
+    while ser.in_waiting:
+        value = ser.read(1)[0]
+        data.append(value)
+
+    if len(data) > 2000:
+        data = data[-2000:]
+
+    curve.setData(data)
 
 timer = QtCore.QTimer()
 timer.timeout.connect(update)
 timer.start(1)
 
-QtGui.QApplication.instance().exec_()
+app.exec_()   # QtWidgets verwendet exec_() statt exec()

@@ -4,6 +4,10 @@
 	(generator_version "9.0")
 	(uuid "3f9fbd01-f781-4d2b-9cc9-105975f4e0a7")
 	(paper "A4")
+	(title_block
+		(title "Oszilloskop")
+		(rev "Version 1.0")
+	)
 	(lib_symbols
 		(symbol "Connector:Conn_Coaxial"
 			(pin_names
@@ -4061,6 +4065,15 @@
 				(hide yes)
 			)
 		)
+		(property "LCSC Part #" "C25822"
+			(at 171.45 90.17 90)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
 		(pin "1"
 			(uuid "93f0b57b-df76-4aa9-87d7-5c8ab1303659")
 		)
@@ -4593,6 +4606,15 @@
 				(hide yes)
 			)
 		)
+		(property "LCSC Part #" "C22961"
+			(at 121.92 81.28 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
 		(pin "2"
 			(uuid "4a35e81f-8608-4bb5-b0e5-6260afa0b3e0")
 		)
@@ -4663,6 +4685,15 @@
 				(hide yes)
 			)
 		)
+		(property "LCSC Part #" "C23254"
+			(at 181.61 34.29 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
 		(pin "2"
 			(uuid "38d32620-75ae-448e-b0aa-876c9a3b43f7")
 		)
@@ -4724,6 +4755,15 @@
 		)
 		(property "Description" "Resistor"
 			(at 111.76 43.18 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "LCSC Part #" "C23146"
+			(at 111.76 43.18 90)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -4865,6 +4905,15 @@
 				(hide yes)
 			)
 		)
+		(property "LCSC Part #" "C7377"
+			(at 234.95 33.02 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
 		(pin "2"
 			(uuid "c93cc906-dbc2-4d35-866c-f0fea95ea637")
 		)
@@ -4952,6 +5001,15 @@
 			)
 		)
 		(property "Description" "1MHz, Low-Power Op Amp, DFN-8"
+			(at 236.22 67.31 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "LCSC Part #" "C7377"
 			(at 236.22 67.31 0)
 			(effects
 				(font
@@ -5057,6 +5115,15 @@
 				(hide yes)
 			)
 		)
+		(property "LCSC Part #" "C4184"
+			(at 248.92 38.1 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
 		(pin "1"
 			(uuid "3bdc2bf5-28ce-4b57-97da-405e34422452")
 		)
@@ -5128,6 +5195,15 @@
 			)
 		)
 		(property "Field5" ""
+			(at 121.92 99.06 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "LCSC Part #" "C23137"
 			(at 121.92 99.06 0)
 			(effects
 				(font
@@ -5347,6 +5423,15 @@
 				(hide yes)
 			)
 		)
+		(property "LCSC Part #" "C23137"
+			(at 181.61 99.06 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
 		(pin "2"
 			(uuid "b3957a56-7e4a-450b-a613-711626af5bbd")
 		)
@@ -5481,6 +5566,15 @@
 				(hide yes)
 			)
 		)
+		(property "LCSC Part #" "C7377"
+			(at 234.95 95.25 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
 		(pin "2"
 			(uuid "35cfb6bb-d3e8-4c88-8f7f-75ef1c4b6589")
 		)
@@ -5576,6 +5670,15 @@
 				(hide yes)
 			)
 		)
+		(property "LCSC Part #" "C25822"
+			(at 111.76 90.17 90)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
 		(pin "1"
 			(uuid "847584e8-de40-4db9-9dbe-d547d0e88666")
 		)
@@ -5638,6 +5741,15 @@
 			)
 		)
 		(property "Description" "Resistor"
+			(at 121.92 34.29 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "LCSC Part #" "C22107"
 			(at 121.92 34.29 0)
 			(effects
 				(font
@@ -5716,6 +5828,15 @@
 				(hide yes)
 			)
 		)
+		(property "LCSC Part #" "C23260"
+			(at 248.92 49.53 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
 		(pin "1"
 			(uuid "a264c1ca-ce02-42bc-9670-dc4ab39d88f6")
 		)
@@ -5776,6 +5897,15 @@
 			)
 		)
 		(property "Description" "1MHz, Low-Power Op Amp, DFN-8"
+			(at 236.22 127 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "LCSC Part #" "C7377"
 			(at 236.22 127 0)
 			(effects
 				(font
@@ -5872,6 +6002,15 @@
 		)
 		(property "Description" "Resistor"
 			(at 171.45 43.18 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "LCSC Part #" "C23263"
+			(at 171.45 43.18 90)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -6157,6 +6296,15 @@
 				(hide yes)
 			)
 		)
+		(property "LCSC Part #" "C23265"
+			(at 181.61 52.07 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
 		(pin "2"
 			(uuid "fc63155a-a53e-40f4-8085-976eb3a7a179")
 		)
@@ -6368,6 +6516,15 @@
 				(hide yes)
 			)
 		)
+		(property "LCSC Part #" "C14663"
+			(at 214.63 50.8 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
 		(pin "1"
 			(uuid "f5eda87e-23b9-447b-b89f-3e4e6aaecb39")
 		)
@@ -6430,6 +6587,15 @@
 			)
 		)
 		(property "Description" "Resistor"
+			(at 181.61 81.28 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "LCSC Part #" "C22961"
 			(at 181.61 81.28 0)
 			(effects
 				(font
@@ -6509,6 +6675,15 @@
 			)
 		)
 		(property "Field5" ""
+			(at 121.92 52.07 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "LCSC Part #" "C25822"
 			(at 121.92 52.07 0)
 			(effects
 				(font
@@ -6843,6 +7018,15 @@
 			)
 		)
 		(property "Description" "Unpolarized capacitor"
+			(at 207.01 113.03 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "LCSC Part #" "C14663"
 			(at 207.01 113.03 0)
 			(effects
 				(font

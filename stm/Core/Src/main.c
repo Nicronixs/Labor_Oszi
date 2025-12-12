@@ -118,53 +118,53 @@ int main(void)
   /* USER CODE BEGIN WHILE */
 
   while (1)
-  {
-	  if (adcReady)
-	    {
-	        adcReady = 0;
+    {
+        if (adcReady)
+          {
+              adcReady = 0;
 
-	        // Rohwerte in ADC-Spannung umrechnen (0..VREF)
-	        float va = (float)adcValues[0] * VREF / ADC_RESOLUTION; // PA4 (CH0 low)
-	        float vb = (float)adcValues[1] * VREF / ADC_RESOLUTION; // PA5 (CH0 high)
-	        float vc = (float)adcValues[2] * VREF / ADC_RESOLUTION; // PA6 (CH1 low)
-	        float vd = (float)adcValues[3] * VREF / ADC_RESOLUTION; // PA7 (CH1 high)
+              // Rohwerte in ADC-Spannung umrechnen (0..VREF)
+              float va = (float)adcValues[0] * VREF / ADC_RESOLUTION; // PA4 (CH0 low)
+              float vb = (float)adcValues[1] * VREF / ADC_RESOLUTION; // PA5 (CH0 high)
+              float vc = (float)adcValues[2] * VREF / ADC_RESOLUTION; // PA6 (CH1 low)
+              float vd = (float)adcValues[3] * VREF / ADC_RESOLUTION; // PA7 (CH1 high)
 
-	        // Threshold zur Bereichserkennung
-	        const float THRESH = 0.05f;
+              // Threshold zur Bereichserkennung
+              const float THRESH = 0.05f;
+              char buffer[128];
+              // CH0: wähle aktiven Bereich
+              float CH0;
+              if (va > THRESH)
+              {
+                  // PA4 aktiv → low range
+                  CH0 = va * SCALE_CH0_LOW;
+                  int len = snprintf(buffer, sizeof(buffer), "%.6f\n",CH0);
+              }
+              else
+              {
+                  // PA5 aktiv → high range
+                  CH0 = vb * SCALE_CH0_HIGH;
+                  int len = snprintf(buffer, sizeof(buffer), "%.6f\n",CH0);
+              }
 
-	        // CH0: wähle aktiven Bereich
-	        float CH0;
-	        if (va > THRESH)
-	        {
-	            // PA4 aktiv → low range
-	            CH0 = va * SCALE_CH0_LOW;
-	        }
-	        else
-	        {
-	            // PA5 aktiv → high range
-	            CH0 = vb * SCALE_CH0_HIGH;
-	        }
+              // CH1: wähle aktiven Bereich
+              float CH1;
+              if (vc > THRESH)
+              {
+                  // PA6 aktiv → low range
+                  CH1 = vc * SCALE_CH1_LOW;
+                  int len = snprintf(buffer, sizeof(buffer), "%.6f\n",CH1);
+              }
+              else
+              {
+                  // PA7 aktiv → high range
+                  CH1 = vd * SCALE_CH1_HIGH;
+                  int len = snprintf(buffer, sizeof(buffer), "%.6f\n",CH1);
+              }
 
-	        // CH1: wähle aktiven Bereich
-	        float CH1;
-	        if (vc > THRESH)
-	        {
-	            // PA6 aktiv → low range
-	            CH1 = vc * SCALE_CH1_LOW;
-	        }
-	        else
-	        {
-	            // PA7 aktiv → high range
-	            CH1 = vd * SCALE_CH1_HIGH;
-	        }
-
-	        // Sende CH0,CH1 per UART im CSV-Format: "CH0,CH1\n"
-	        char buffer[128];
-	        int len = snprintf(buffer, sizeof(buffer), "%.6f,%.6f,%.6f,%.6f\n",SCALE_CH0_LOW,SCALE_CH0_HIGH,SCALE_CH1_LOW, SCALE_CH1_HIGH);
-	        HAL_UART_Transmit(&huart2, (uint8_t*)buffer, len, 20);
-	        }
-	    }
-
+              HAL_UART_Transmit(&huart2, (uint8_t*)buffer, len, 20);
+              }
+          }
 
 
 
