@@ -47,13 +47,6 @@
 /* Private variables ---------------------------------------------------------*/
 
 /* USER CODE BEGIN PV */
-#include <string.h>
-#include <stdio.h>
-#include <stdint.h>
-#include "main.h"
-#include "adc.h"
-#include "usart.h"
-#include "gpio.h"
 
 
 #define ADC_RESOLUTION      4095.0f
@@ -177,10 +170,11 @@ int main(void)
 
 
     /* USER CODE END WHILE */
-
-    /* USER CODE BEGIN 3 */
   }
+    /* USER CODE BEGIN 3 */
+
   /* USER CODE END 3 */
+}
 
 
 /**
@@ -261,11 +255,17 @@ void HAL_ADC_ConvCpltCallback(ADC_HandleTypeDef* hadc)
 void Error_Handler(void)
 {
   /* USER CODE BEGIN Error_Handler_Debug */
-  /* User can add his own implementation to report the HAL error return state */
+  /* User can add your own implementation to report the HAL error return state */
   __disable_irq();
 
-  /* USER CODE END Error_Handler_Debug */
+  while (1)
+  {
+    // Optional: LED blinken lassen oder Debug-Meldung senden
+  }
 }
+  /* USER CODE END Error_Handler_Debug */
+
+
 
 
 #ifdef USE_FULL_ASSERT
