@@ -170,19 +170,19 @@ int main(void)
 
 
     /* USER CODE END WHILE */
-<<<<<<< HEAD
+
 
     /* USER CODE BEGIN 3 */
-=======
+
   }
     /* USER CODE BEGIN 3 */
 
   /* USER CODE END 3 */
-}
->>>>>>> 52c20d3237fc1ca76fba56bffd58218fe4cd2d71
+
+
 
   /* USER CODE END 3 */
-}
+
 
 /**
   * @brief System Clock Configuration
