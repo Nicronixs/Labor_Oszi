@@ -60,8 +60,13 @@ all: main-build
 main-build: Labor.elf secondary-outputs
 
 # Tool invocations
+<<<<<<< HEAD
 Labor.elf Labor.map: $(OBJS) $(USER_OBJS) C:\Users\Ninco\OneDrive\Desktop\Labor_Oszi\code\stm.v.1.0\Labor\STM32L432KCUX_FLASH.ld makefile objects.list $(OPTIONAL_TOOL_DEPS)
 	arm-none-eabi-gcc -o "Labor.elf" @"objects.list" $(USER_OBJS) $(LIBS) -mcpu=cortex-m4 -T"C:\Users\Ninco\OneDrive\Desktop\Labor_Oszi\code\stm.v.1.0\Labor\STM32L432KCUX_FLASH.ld" --specs=nosys.specs -Wl,-Map="Labor.map" -Wl,--gc-sections -static -u _printf_float --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -Wl,--start-group -lc -lm -Wl,--end-group
+=======
+Labor.elf Labor.map: $(OBJS) $(USER_OBJS) C:\Users\schon\OneDrive\Desktop\Labor_Oszi\stm.v.1.0\Labor\STM32L432KCUX_FLASH.ld makefile objects.list $(OPTIONAL_TOOL_DEPS)
+	arm-none-eabi-gcc -o "Labor.elf" @"objects.list" $(USER_OBJS) $(LIBS) -mcpu=cortex-m4 -T"C:\Users\schon\OneDrive\Desktop\Labor_Oszi\stm.v.1.0\Labor\STM32L432KCUX_FLASH.ld" --specs=nosys.specs -Wl,-Map="Labor.map" -Wl,--gc-sections -static -u _printf_float --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -Wl,--start-group -lc -lm -Wl,--end-group
+>>>>>>> 52c20d3237fc1ca76fba56bffd58218fe4cd2d71
 	@echo 'Finished building target: $@'
 	@echo ' '
 
