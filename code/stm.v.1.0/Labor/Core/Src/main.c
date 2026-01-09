@@ -173,15 +173,15 @@ int main(void)
 
 
 
-
+  }
 
 
     /* USER CODE END WHILE */
 
     /* USER CODE BEGIN 3 */
-  }
-  /* USER CODE END 3 */
 
+  /* USER CODE END 3 */
+}
 
 /**
   * @brief System Clock Configuration
@@ -258,7 +258,7 @@ void HAL_ADC_ConvCpltCallback(ADC_HandleTypeDef* hadc)
   * @brief  This function is executed in case of error occurrence.
   * @retval None
   */
-void Error_Handler(void)
+void Error_Handler()
 {
   /* USER CODE BEGIN Error_Handler_Debug */
   /* User can add his own implementation to report the HAL error return state */
@@ -266,6 +266,7 @@ void Error_Handler(void)
 
   /* USER CODE END Error_Handler_Debug */
 }
+
 
 
 #ifdef USE_FULL_ASSERT
